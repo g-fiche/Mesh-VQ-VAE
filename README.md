@@ -69,20 +69,24 @@ To finetune and test Mesh-VQ-VAE, we use the annotations of the [3DPW](https://v
 ## Train
 
 You can train Mesh-VQ-VAE by running:
+
     python train_mesh_vqvae.py
 
 The configuration of the model used in [VQ-HPS](https://g-fiche.github.io/research-pages/vqhps/) can be found under ```config_autoencoder/config_medium```. The pre-trained weights are in ```checkpoint/mesh-vqvae_54```.
 
 To finetune Mesh-VQ-VAE, update the checkpoint in the configuration file and use:
+
     python finetune_mesh_vq_vae.py
 
 
 ## Test and analyze
 
 Mesh-VQ-VAE can be tested using:
+
     python test_mesh_vqvae.py
 
 Like for finetuning, the path of the checkpoint can be updated in the config file.
 
 To visualize operations in the latent space, use:
+
     python analyze_vqvae.py --p "path_to_save_visualizations"
