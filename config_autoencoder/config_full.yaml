@@ -1,0 +1,34 @@
+train:
+  batch: 16
+  lr: 5e-5
+  device: 'cuda'
+  epochs: 500
+  workers: 8
+  train_steps: 500
+  eval_steps: 50
+  
+  
+model:
+  num_embeddings: 128
+  embedding_dim: 9
+  commitment_cost: 0.25
+  decay: 0.99
+  num_quantizer: 8
+  
+
+modelconv:
+  batch: 16
+  connection_folder: body_models/ConnectionMatrices/
+  initial_connection_fn: body_models/ConnectionMatrices/_pool0.npy
+  connection_layer_lst: ["pool0", "pool1", "pool2","pool3", "pool4", "pool5", "pool6", "pool7", "unpool7","unpool6", "unpool5","unpool4","unpool3","unpool2","unpool1", "unpool0"]
+  channel_lst: [ 32, 32,  64, 64, 128, 128, 9, 9, 9, 128, 128,64, 64,32, 32,3]
+  weight_num_lst: [9,0, 9,0, 9,0, 9,0,   0,9, 0,9,0,9,0,9]
+  residual_rate_lst: [0,1,  0,1,  0,1,  0,1,   1,0,  1,0,  1,0,  1,0]
+
+
+  
+dataset:
+  train_path: 'datasets/bedlam_animations'
+  finetune_path: 'datasets/3DPW/train'
+  val_path: 'datasets/3DPW/3DPW_validation.npz'
+  test_path: 'datasets/3DPW/3DPW_test.npz'

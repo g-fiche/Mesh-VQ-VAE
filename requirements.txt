@@ -1,0 +1,6 @@
+hydra-core==1.3.2
+omegaconf==2.3.0
+matplotlib==3.7.1
+smplx==0.1.28
+pandas==2.0.1
+loguru==0.7.2

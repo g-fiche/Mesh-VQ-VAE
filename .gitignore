@@ -1,0 +1,6 @@
+/datasets
+/body_models
+/outputs
+*__pycache__*
+*.pyc
+/analyze
