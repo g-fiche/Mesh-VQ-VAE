@@ -2,6 +2,8 @@
 
 This repository implements Mesh-VQ-VAE, a vector-quantized autoencoder for human meshes used in [VQ-HPS](https://g-fiche.github.io/research-pages/vqhps/).
 
+If you find this code useful, please consider citing the associated [paper](https://g-fiche.github.io/research-pages/vqhps/).
+
 ![Mesh-VQ-VAE](images/reconstruction.png)
 
 ## Installation
@@ -90,3 +92,15 @@ Like for finetuning, the path of the checkpoint can be updated in the config fil
 To visualize operations in the latent space, use:
 
     python analyze_vqvae.py --p "path_to_save_visualizations"
+
+
+## Acknowledgements
+
+This study is part of the EUR DIGISPORT project supported by the ANR within the framework of the PIA France 2030 (ANR-18-EURE-0022). This work was performed using HPC resources from the “Mésocentre” computing center of CentraleSupélec, École Normale Supérieure Paris-Saclay, and Université Paris-Saclay supported by CNRS and Région Île-de-France.
+
+Some code in this repository is adapted from the following repositories:
+- [MeshConvolution](https://github.com/papagina/MeshConvolution)
+- [VQ-MAE-S](https://github.com/samsad35/VQ-MAE-S-code)
+- [Pose-NDF](https://github.com/garvita-tiwari/PoseNDF/tree/version2)
+- [HuMoR](https://github.com/davrempe/humor)
+- [FastMETRO](https://github.com/postech-ami/FastMETRO)
