@@ -54,7 +54,7 @@ The [SMPL-H](https://mano.is.tue.mpg.de/index.html) body model is used to obtain
 
 The Mesh-VQ-VAE encoder-decoder architecture is based on the fully convolutional mesh autoencoder (see the project page of the corresponding paper [[here]](https://zhouyisjtu.github.io/project_vcmeshcnn/vcmeshcnn.html)). In order to use this model, please download:
 - The ```template.ply``` file available [here](https://github.com/papagina/MeshConvolution/tree/master/data/DFAUST), and place it in the ```body_models``` folder.
-- The connection matrices of the mesh autoencoder available [here](https://github.com/papagina/MeshConvolution/tree/master/train/0223_GraphAE27_compare/connections) under the ```dfaust``` folder. Rename the folder ```ConnectionMatrices``` and place it under the ```body_models``` folder.
+- The connection matrices of the mesh autoencoder available [here](https://github.com/papagina/MeshConvolution/tree/master/train/0223_GraphAE27_compare/connections) under the ```dfaust2``` folder. Rename the folder ```ConnectionMatrices``` and place it under the ```body_models``` folder.
 
 ### Datasets
 
