@@ -104,3 +104,12 @@ Some code in this repository is adapted from the following repositories:
 - [Pose-NDF](https://github.com/garvita-tiwari/PoseNDF/tree/version2)
 - [HuMoR](https://github.com/davrempe/humor)
 - [FastMETRO](https://github.com/postech-ami/FastMETRO)
+
+## Citation
+
+    @inproceedings{fiche2024vq,
+        title={VQ-HPS: Human Pose and Shape Estimation in a Vector-Quantized Latent Space},
+        author={Fiche, Gu{\'e}nol{\'e} and Leglaive, Simon and Alameda-Pineda, Xavier and Agudo, Antonio and Moreno-Noguer, Francesc},
+        booktitle={European Conference on Computer Vision ({ECCV})},
+        year={2024}
+    }
