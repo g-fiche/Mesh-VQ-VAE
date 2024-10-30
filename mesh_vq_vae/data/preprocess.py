@@ -35,6 +35,10 @@ def pkl_to_single_npz(folder, set, save_path):
     sequences = [
         x.split(".")[0] for x in os.listdir(osp.join(folder, "sequenceFiles", set))
     ]
+    all_root_orient = []
+    all_pose_body = []
+    all_betas = []
+    all_gender = []
 
     for seq in tqdm(sequences):
         data_file = osp.join(folder, "sequenceFiles", set, seq + ".pkl")
@@ -49,12 +53,18 @@ def pkl_to_single_npz(folder, set, save_path):
             betas = data["betas"][p_id][:10]
             gender = data["genders"][p_id]
 
+            for i,(orient,pose) in enumerate(zip(root_orient,pose_body)):
+                all_root_orient.append(orient)
+                all_pose_body.append(pose)
+                all_betas.append(betas)
+                all_gender.append(gender)
+
     np.savez(
         save_path,
-        root_orient=root_orient,
-        pose_body=pose_body,
-        betas=betas,
-        gender=gender,
+        root_orient=all_root_orient,
+        pose_body=all_pose_body,
+        betas=all_betas,
+        gender=all_gender,
     )
 
 
